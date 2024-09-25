@@ -1,0 +1,25 @@
+.chat-view {
+    position: absolute;
+    width: 30%;
+    height: 350px; 
+    right: 0;
+    top: 20%;
+    margin: 10px;
+    border: solid;
+    border-color: black;
+}
+  
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}
+  
+.conversation {
+    margin-top: 50px; /* Pushes conversation below the topbar */    
+    background-color: white;
+    height: calc(100% - 50px); /* conversation takes up the remaining height */
+}

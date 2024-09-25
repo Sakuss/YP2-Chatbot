@@ -1,0 +1,9 @@
+.chat-bot-icon {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+}
