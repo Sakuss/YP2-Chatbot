@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 
+import getResponseFromServer from './ServerAPI'
+
 import './css/ChatView.css'
 
 function ChatView(){
@@ -22,17 +24,14 @@ function ChatView(){
     const handleButtonClick = async (event) => {
         event.preventDefault()
         //newMessage, messages
-        let response = await axios({
-            method: 'GET',
-            url: `http://127.0.0.1:1024/response?question=${newMessage}`
-        })
+        let response = await getResponseFromServer(newMessage)
 
         if (newMessage.trim() !== '') {
             setMessages(
                 [
                     ...messages, 
                     {id: messages.length+1, text: newMessage},
-                    {id: messages.length+2, text: response.data.response}
+                    {id: messages.length+2, text: response}
                 ]
             )
             setNewMessage("")
