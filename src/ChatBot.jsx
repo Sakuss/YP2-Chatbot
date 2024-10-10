@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-import './ChatBot.css'
+import './css/ChatBot.css'
 import ChatView from "./ChatView"
 
 function ChatBot(){

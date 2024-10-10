@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 
-import './ChatView.css'
+import './css/ChatView.css'
 
 function ChatView(){
 
