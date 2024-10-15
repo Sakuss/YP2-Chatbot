@@ -9,7 +9,6 @@ function ChatView(){
 
     const [messages, setMessages] = useState([])
     const [newMessage, setNewMessage] = useState("")
-
     const messagesEndRef = useRef(null)
 
     useEffect(() => {
@@ -22,21 +21,27 @@ function ChatView(){
 
     //axioksella haetaan 
     const handleButtonClick = async (event) => {
-        event.preventDefault()
+        event.preventDefault();
         //newMessage, messages
-        let response = await getResponseFromServer(newMessage)
+        //let response = await getResponseFromServer(newMessage)
 
-        if (newMessage.trim() !== '') {
+        if (newMessage.trim() === '') {
+            return;
+        } try {
+            const botResponse = await getResponseFromServer(newMessage);
+
             setMessages(
                 [
                     ...messages, 
-                    {id: messages.length+1, text: newMessage},
-                    {id: messages.length+2, text: response}
+                    {id: messages.length+1, text: newMessage, sender: "user"},
+                    {id: messages.length+2, text: botResponse, sender: "bot"}
                 ]
-            )
+            );
             setNewMessage("")
+        } catch (error) {
+            console.error("Error while sending message:", error);
         }
-    }
+    };
 
     return(
         <div className="chat-view">
