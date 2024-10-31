@@ -52,7 +52,7 @@ function ChatView(){
                 ref={messagesEndRef}
             >
                 {messages.map((message) => (
-                    <div key={message.id}>
+                    <div key={message.id} style={{"padding-bottom" : 25}}>
                         {message.text}
                     </div>
                 ))}
