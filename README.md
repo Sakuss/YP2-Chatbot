@@ -8,9 +8,11 @@ Kuva 1. Pätkä kontekstia
 
 ## Teknologiat
 
-Sovelluksen käyttöliittymä toteutettiin React Vitellä ja palvelin pythonilla, käyttäen fastApi -kirjastoa. Konteksi ja keskusteluhistoria säilöttiin MySQL -tietokantaan.
+Sovelluksen käyttöliittymä toteutettiin React Vitellä ja palvelin pythonilla, käyttäen fastApi -kirjastoa. Konteksti ja keskusteluhistoria säilöttiin MySQL -tietokantaan.
 
 ## Sovelluksen arkkitehtuuri
+
+Sovelluksen arkkitehtuuriksi valikoitui client-server -malli, koska jo valmiiksi aiemmassa projektissa pythonilla luotu tekoälybotti oli helppo muovata kyseiseen arkkitehtuuriin.
 
 ![arkkitehtuuri](https://github.com/Sakuss/YP2-Chatbot/blob/main/images/arkkitehtuuri.png)
 
